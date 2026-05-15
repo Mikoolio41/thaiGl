@@ -1,0 +1,269 @@
+[
+  {
+    "id": "thai-gl-couples-101",
+    "title": "Thai GL Couples 101",
+    "description": "Test your knowledge of pairings, shows, and milestones across all of Thai GL.",
+    "category": "general knowledge",
+    "difficulty": "easy",
+    "coverImage": "https://picsum.photos/800/400?random=1",
+    "seriesTag": "general",
+    "questionCount": 7,
+    "estimatedMinutes": 5,
+    "questions": [
+      {
+        "id": "tgl101-q1",
+        "quizId": "thai-gl-couples-101",
+        "type": "multiple-choice",
+        "question": "Which pairing stars in Affair (2024)?",
+        "options": ["LMSY (Lookmhee & Sonya)", "FreenBecky (Freen & Becky)", "EngLot (Engfa & Charlotte)", "MilkLove (Milk & Love)"],
+        "correctAnswer": "LMSY (Lookmhee & Sonya)",
+        "explanation": "Affair stars Sonya (Saranphat Pedersen) as Pleng and Lookmhee (Punyapat Wangpongsathaporn) as Wan — this pairing is known as LMSY. The show aired on ONE31 in 2024.",
+        "mediaUrl": null,
+        "seriesTag": "Affair",
+        "difficulty": "easy"
+      },
+      {
+        "id": "tgl101-q2",
+        "quizId": "thai-gl-couples-101",
+        "type": "multiple-choice",
+        "question": "Which show holds the title of Thailand's first GL period drama?",
+        "options": ["The Loyal Pin", "GAP The Series", "Affair", "23.5"],
+        "correctAnswer": "The Loyal Pin",
+        "explanation": "The Loyal Pin (2024) made history as Thailand's first GL period drama, set in 1950s Thailand. It starred FreenBecky and aired on Workpoint TV.",
+        "mediaUrl": null,
+        "seriesTag": "The Loyal Pin",
+        "difficulty": "easy"
+      },
+      {
+        "id": "tgl101-q3",
+        "quizId": "thai-gl-couples-101",
+        "type": "multiple-choice",
+        "question": "What was the first ever full-length Thai GL series?",
+        "options": ["GAP The Series", "The Loyal Pin", "Show Me Love", "Affair"],
+        "correctAnswer": "GAP The Series",
+        "explanation": "GAP The Series (2022) by Idol Factory made history as the first ever full-length Thai GL series. It stars FreenBecky (Freen Sarocha & Becky Armstrong) across 12 episodes.",
+        "mediaUrl": null,
+        "seriesTag": "GAP The Series",
+        "difficulty": "easy"
+      },
+      {
+        "id": "tgl101-q4",
+        "quizId": "thai-gl-couples-101",
+        "type": "multiple-choice",
+        "question": "Which production company made 23.5?",
+        "options": ["GMMTV", "Idol Factory", "WeTV", "Workpoint TV"],
+        "correctAnswer": "GMMTV",
+        "explanation": "23.5 is a GMMTV production starring Milk Pansa and Love Pattranite (the MilkLove pairing). It ran for 12 episodes and is available on Netflix (SEA & Latin America) and YouTube.",
+        "mediaUrl": null,
+        "seriesTag": "23.5",
+        "difficulty": "easy"
+      },
+      {
+        "id": "tgl101-q5",
+        "quizId": "thai-gl-couples-101",
+        "type": "multiple-choice",
+        "question": "In The Loyal Pin, what decade is the story set in?",
+        "options": ["1950s", "1930s", "1970s", "1940s"],
+        "correctAnswer": "1950s",
+        "explanation": "The Loyal Pin is set in 1950s Thailand, following Princess Anin and noble lady Pin — childhood friends navigating royal life, duty, and love in mid-century Siam.",
+        "mediaUrl": null,
+        "seriesTag": "The Loyal Pin",
+        "difficulty": "easy"
+      },
+      {
+        "id": "tgl101-q6",
+        "quizId": "thai-gl-couples-101",
+        "type": "multiple-choice",
+        "question": "How many countries did The Loyal Pin trend in upon release?",
+        "options": ["38", "20", "15", "50"],
+        "correctAnswer": "38",
+        "explanation": "The Loyal Pin trended in 38 countries and ranked #1 in 20 of them — a remarkable global reach for a Thai GL series. It also surpassed 300 million views.",
+        "mediaUrl": null,
+        "seriesTag": "The Loyal Pin",
+        "difficulty": "medium"
+      },
+      {
+        "id": "tgl101-q7",
+        "quizId": "thai-gl-couples-101",
+        "type": "multiple-choice",
+        "question": "Which pairing stars in Show Me Love — described as their first GL collaboration?",
+        "options": ["EngLot (Engfa & Charlotte)", "FreenBecky (Freen & Becky)", "LMSY (Lookmhee & Sonya)", "MilkLove (Milk & Love)"],
+        "correctAnswer": "EngLot (Engfa & Charlotte)",
+        "explanation": "Show Me Love on Grand TV Thailand was the first GL pairing for Engfa Waraha and Charlotte Austin — now known as EngLot. They went on to star in Petrichor, Unlimited Love, 4 Elements: The Water, and Love Bully.",
+        "mediaUrl": null,
+        "seriesTag": "Show Me Love",
+        "difficulty": "medium"
+      }
+    ]
+  },
+  {
+    "id": "loyal-pin-deep-dive",
+    "title": "The Loyal Pin Deep Dive",
+    "description": "For the dedicated FreenBecky fans. How deeply do you know Anin & Pin's story?",
+    "category": "plot",
+    "difficulty": "medium",
+    "coverImage": "https://picsum.photos/800/400?random=2",
+    "seriesTag": "The Loyal Pin",
+    "questionCount": 6,
+    "estimatedMinutes": 4,
+    "questions": [
+      {
+        "id": "lp-q1",
+        "quizId": "loyal-pin-deep-dive",
+        "type": "multiple-choice",
+        "question": "What is Pin's full name in The Loyal Pin?",
+        "options": ["Pilantita", "Pinkaew", "Pintipa", "Phimonrat"],
+        "correctAnswer": "Pilantita",
+        "explanation": "Pin's full name is Pilantita. She is a noble lady and childhood friend of Princess Anin, played by Becky Armstrong.",
+        "mediaUrl": null,
+        "seriesTag": "The Loyal Pin",
+        "difficulty": "medium"
+      },
+      {
+        "id": "lp-q2",
+        "quizId": "loyal-pin-deep-dive",
+        "type": "multiple-choice",
+        "question": "What is Anin's full name in The Loyal Pin?",
+        "options": ["Anilaphat", "Anuchit", "Ananya", "Anittha"],
+        "correctAnswer": "Anilaphat",
+        "explanation": "Princess Anilaphat, played by Freen Sarocha, is the royal lead of the series — a princess navigating duty and her feelings for her childhood companion Pin.",
+        "mediaUrl": null,
+        "seriesTag": "The Loyal Pin",
+        "difficulty": "medium"
+      },
+      {
+        "id": "lp-q3",
+        "quizId": "loyal-pin-deep-dive",
+        "type": "multiple-choice",
+        "question": "Where does Anin go to study, separating her from Pin?",
+        "options": ["England", "France", "Japan", "America"],
+        "correctAnswer": "England",
+        "explanation": "Princess Anin is sent to study in England, which creates the central distance between her and Pin. The separation shapes the emotional tension throughout the series.",
+        "mediaUrl": null,
+        "seriesTag": "The Loyal Pin",
+        "difficulty": "medium"
+      },
+      {
+        "id": "lp-q4",
+        "quizId": "loyal-pin-deep-dive",
+        "type": "multiple-choice",
+        "question": "How many episodes does The Loyal Pin have?",
+        "options": ["16", "12", "8", "20"],
+        "correctAnswer": "16",
+        "explanation": "The Loyal Pin ran for 16 episodes, airing from August to November 2024 on Workpoint TV and YouTube.",
+        "mediaUrl": null,
+        "seriesTag": "The Loyal Pin",
+        "difficulty": "easy"
+      },
+      {
+        "id": "lp-q5",
+        "quizId": "loyal-pin-deep-dive",
+        "type": "multiple-choice",
+        "question": "Which channel did The Loyal Pin originally air on in Thailand?",
+        "options": ["Workpoint TV", "Channel 3", "ONE31", "GMM25"],
+        "correctAnswer": "Workpoint TV",
+        "explanation": "The Loyal Pin aired on Workpoint TV in Thailand alongside a YouTube release — a combination that helped it reach its massive global audience.",
+        "mediaUrl": null,
+        "seriesTag": "The Loyal Pin",
+        "difficulty": "easy"
+      },
+      {
+        "id": "lp-q6",
+        "quizId": "loyal-pin-deep-dive",
+        "type": "multiple-choice",
+        "question": "What makes The Loyal Pin unique in Thai GL history?",
+        "options": ["First GL period drama", "First GL with 16 episodes", "First GL on Workpoint TV", "First GL with 300M views"],
+        "correctAnswer": "First GL period drama",
+        "explanation": "The Loyal Pin is Thailand's first GL period drama — set in 1950s Thailand, it broke new ground for the genre both in storytelling scope and historical setting.",
+        "mediaUrl": null,
+        "seriesTag": "The Loyal Pin",
+        "difficulty": "easy"
+      }
+    ]
+  },
+  {
+    "id": "gap-universe",
+    "title": "The GAP Universe",
+    "description": "GAP, Affair, and the connected world of Idol Factory's GL output. Do you know it all?",
+    "category": "plot",
+    "difficulty": "hard",
+    "coverImage": "https://picsum.photos/800/400?random=3",
+    "seriesTag": "GAP The Series",
+    "questionCount": 6,
+    "estimatedMinutes": 5,
+    "questions": [
+      {
+        "id": "gap-q1",
+        "quizId": "gap-universe",
+        "type": "multiple-choice",
+        "question": "What is the name of the novel author who wrote the source material for both GAP and Affair?",
+        "options": ["Chao Planoy", "Salmon", "Lambo", "NorthStar"],
+        "correctAnswer": "Chao Planoy",
+        "explanation": "Author Chao Planoy wrote the novels that became both GAP The Series and Affair. Affair is explicitly stated to be part of the GAP universe.",
+        "mediaUrl": null,
+        "seriesTag": "GAP The Series",
+        "difficulty": "hard"
+      },
+      {
+        "id": "gap-q2",
+        "quizId": "gap-universe",
+        "type": "multiple-choice",
+        "question": "In Affair, how many years pass between Pleng and Wan's childhood separation and their reunion?",
+        "options": ["13 years", "10 years", "7 years", "15 years"],
+        "correctAnswer": "13 years",
+        "explanation": "Pleng and Wan are separated by tragedy and reunite 13 years later as adults. Pleng is from a wealthy family; Wan's mother was Pleng's family's maid.",
+        "mediaUrl": null,
+        "seriesTag": "Affair",
+        "difficulty": "medium"
+      },
+      {
+        "id": "gap-q3",
+        "quizId": "gap-universe",
+        "type": "quote",
+        "question": "The Affair OST is 'I'm Yours' — who recorded it?",
+        "options": ["Sonya & Lookmhee", "Freen & Becky", "Engfa & Charlotte", "Milk & Love"],
+        "correctAnswer": "Sonya & Lookmhee",
+        "explanation": "'I'm Yours' is performed by Sonya (Saranphat Pedersen) and Lookmhee (Punyapat Wangpongsathaporn), the LMSY pairing who star in the show itself.",
+        "mediaUrl": null,
+        "seriesTag": "Affair",
+        "difficulty": "medium"
+      },
+      {
+        "id": "gap-q4",
+        "quizId": "gap-universe",
+        "type": "multiple-choice",
+        "question": "In Affair, what is Wan's profession when she and Pleng reunite?",
+        "options": ["Doctor", "Lawyer", "Chef", "Teacher"],
+        "correctAnswer": "Doctor",
+        "explanation": "When Pleng and Wan reunite after 13 years, Wan has become a doctor — a significant leap from her humble origins as the daughter of Pleng's family's maid.",
+        "mediaUrl": null,
+        "seriesTag": "Affair",
+        "difficulty": "hard"
+      },
+      {
+        "id": "gap-q5",
+        "quizId": "gap-universe",
+        "type": "multiple-choice",
+        "question": "How many episodes does Affair have?",
+        "options": ["8", "12", "16", "6"],
+        "correctAnswer": "8",
+        "explanation": "Affair ran for 8 episodes, airing August–October 2024 on ONE31. Despite its short run, it became one of the most-discussed Thai GL releases of 2024.",
+        "mediaUrl": null,
+        "seriesTag": "Affair",
+        "difficulty": "easy"
+      },
+      {
+        "id": "gap-q6",
+        "quizId": "gap-universe",
+        "type": "multiple-choice",
+        "question": "Which pairing stars in Affair?",
+        "options": ["LMSY (Lookmhee & Sonya)", "FreenBecky (Freen & Becky)", "EngLot (Engfa & Charlotte)", "MilkLove (Milk & Love)"],
+        "correctAnswer": "LMSY (Lookmhee & Sonya)",
+        "explanation": "Affair stars Lookmhee (Punyapat Wangpongsathaporn) as Wan and Sonya (Saranphat Pedersen) as Pleng — the LMSY pairing. Hometown Romance (2026) is their third GL collaboration.",
+        "mediaUrl": null,
+        "seriesTag": "Affair",
+        "difficulty": "easy"
+      }
+    ]
+  }
+]
