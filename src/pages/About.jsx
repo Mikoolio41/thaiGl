@@ -38,6 +38,12 @@ const PAIRINGS = [
     shows: ["The Secret of Us"],
     note: "Their Netflix debut The Secret of Us made LingOrm one of Thai GL's most recognised international pairings of 2024.",
   },
+  {
+    name: "LenaMiu",
+    members: "Lena & Miu",
+    shows: ["My Safe Zone"],
+    note: "Channel 3's LenaMiu pairing, starring in My Safe Zone.",
+  },
 ];
 
 export default function About() {
