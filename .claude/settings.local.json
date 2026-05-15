@@ -4,7 +4,8 @@
       "PowerShell(Get-ChildItem *)",
       "PowerShell(Stop-Process *)",
       "Bash(npm install *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "WebFetch(domain:mydramalist.com)"
     ]
   }
 }

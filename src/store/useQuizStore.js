@@ -1,5 +1,14 @@
 import { create } from 'zustand'
 
+function shuffle(arr) {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
 /**
  * Central quiz state. Session flow:
  * startQuiz → answerQuestion (records answer, stays on question) →
@@ -14,16 +23,21 @@ const useQuizStore = create((set, get) => ({
   isFinished: false,
   isStarted: false,
 
-  startQuiz: (quiz) =>
+  startQuiz: (quiz) => {
+    const shuffledQuiz = {
+      ...quiz,
+      questions: quiz.questions.map((q) => ({ ...q, options: shuffle(q.options) })),
+    }
     set({
-      currentQuiz: quiz,
+      currentQuiz: shuffledQuiz,
       currentQuestionIndex: 0,
       answers: [],
       score: 0,
       timeLeft: 30,
       isFinished: false,
       isStarted: true,
-    }),
+    })
+  },
 
   /** Records the answer for the current question. Does NOT advance the index. */
   answerQuestion: (selectedAnswer) => {

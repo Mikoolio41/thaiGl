@@ -35,7 +35,7 @@ export default function About() {
       <div className="mb-12 text-center">
         <p className="section-subtitle mb-3">About</p>
         <h1 className="font-display text-display-lg italic text-zinc-100">
-          Enemize Ben Yafit
+          Emenize Ben Yafit
           <span className="block text-gradient-rose text-2xl mt-1 not-italic font-normal tracking-widest">
             สัพพรส
           </span>

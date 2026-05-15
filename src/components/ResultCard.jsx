@@ -17,7 +17,7 @@ export default function ResultCard({ score, total, quizTitle, quizId, answers })
   const pct = total > 0 ? Math.round((score / total) * 100) : 0
 
   const shareText = encodeURIComponent(
-    `I scored ${score}/${total} on "${quizTitle}" and earned "${grade.label} ${grade.emoji}" on Enemize Ben Yafit — the Thai GL quiz site! How well do you know your Thai GL? #ThaiGL #EnemizeBenYafit`
+    `I scored ${score}/${total} on "${quizTitle}" and earned "${grade.label} ${grade.emoji}" on Emenize Ben Yafit — the Thai GL quiz site! How well do you know your Thai GL? #ThaiGL #EmenizeBenYafit`
   )
   const twitterUrl = `https://twitter.com/intent/tweet?text=${shareText}`
 

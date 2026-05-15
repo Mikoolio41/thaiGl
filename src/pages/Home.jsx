@@ -1,138 +1,208 @@
-import { Link } from 'react-router-dom'
-import QuizCard from '../components/QuizCard'
-import SeriesTag from '../components/SeriesTag'
-import quizzes from '../data/quizzes.json'
+import { Link } from "react-router-dom";
+import QuizCard from "../components/QuizCard";
+import quizzes from "../data/quizzes.json";
 
-const FEATURED_SERIES = [
-  { name: 'The Loyal Pin', note: 'FreenBecky · 16 eps · 300M+ views' },
-  { name: 'GAP The Series', note: 'FreenBecky · First Thai GL series' },
-  { name: 'Affair', note: 'LMSY · 8 eps · GAP universe' },
-  { name: '23.5', note: 'MilkLove · GMMTV · Netflix' },
-  { name: 'Petrichor', note: 'EngLot · Engfa & Charlotte' },
-  { name: 'The Secret of Us', note: 'Lingling & Orm · Netflix' },
-  { name: 'Hometown Romance', note: 'LMSY · Premiered Apr 2026' },
-  { name: '4 Elements: The Earth', note: 'Apple & Mim · Channel 7' },
-]
+const SERIES_LIST = [
+  { name: "GAP The Series",          year: "2022", note: "FreenBecky · First Thai GL" },
+  { name: "Show Me Love",            year: "2023", note: "EngLot debut" },
+  { name: "Affair",                  year: "2024", note: "LMSY · GAP universe" },
+  { name: "23.5",                    year: "2024", note: "MilkLove · GMMTV · Netflix" },
+  { name: "The Loyal Pin",           year: "2024", note: "FreenBecky · 300M+ views" },
+  { name: "The Secret of Us",        year: "2024", note: "Netflix" },
+  { name: "Us",                      year: "2024", note: "" },
+  { name: "ClaireBell",              year: "2025", note: "" },
+  { name: "Dangerous Queen",         year: "2025", note: "" },
+  { name: "Denied Love",             year: "2025", note: "" },
+  { name: "Harmony Secret",          year: "2025", note: "LMSY" },
+  { name: "Love Bully",              year: "2025", note: "EngLot" },
+  { name: "Love Design",             year: "2025", note: "" },
+  { name: "My Safe Zone",            year: "2025", note: "" },
+  { name: "Only You",                year: "2025", note: "" },
+  { name: "Petrichor",               year: "2025", note: "EngLot" },
+  { name: "Player",                  year: "2025", note: "" },
+  { name: "Poisonous Love",          year: "2025", note: "" },
+  { name: "Queendom",                year: "2025", note: "" },
+  { name: "Reverse for You",         year: "2025", note: "" },
+  { name: "Reverse with Me",         year: "2025", note: "" },
+  { name: "Roller Coaster",          year: "2025", note: "" },
+  { name: "Somewhere Somehow",       year: "2025", note: "" },
+  { name: "Unlimited Love",          year: "2025", note: "EngLot" },
+  { name: "Whale Store xoxo",        year: "2025", note: "Netflix" },
+  { name: "4 Elements: The Water",   year: "2025", note: "EngLot" },
+  { name: "4 Elements: The Earth",   year: "2026", note: "" },
+  { name: "Hometown Romance",        year: "2026", note: "LMSY" },
+];
 
 export default function Home() {
-  const featuredQuizzes = quizzes.slice(0, 3)
+  const featuredQuizzes = quizzes.slice(0, 3);
 
   return (
-    <div className="pt-16">
-      {/* Hero */}
-      <section className="relative min-h-[90dvh] flex flex-col items-center justify-center px-4 text-center bg-gradient-hero overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-mauve-deep/8 blur-3xl" />
-          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-rose-dust/6 blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-gold-warm/4 blur-3xl" />
+    <div>
+      {/* ── Hero ─────────────────────────────────────────── */}
+      <section className="relative mt-14 min-h-[calc(100dvh-3.5rem)] flex flex-col justify-end pb-16 sm:pb-24 px-5 sm:px-8 overflow-hidden">
+        {/* Full-bleed background image */}
+        <div className="absolute inset-0">
+          <img
+            src="/hero.jpg"
+            alt=""
+            className="w-full h-full object-cover object-center"
+            aria-hidden="true"
+          />
+          {/* Multi-layer overlay: keep the dark base + let image bleed through */}
+          <div className="absolute inset-0 bg-bg-base/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-bg-base via-bg-base/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-bg-base/70 via-transparent to-transparent" />
         </div>
 
-        {/* Thai geometric border top */}
-        <div className="absolute top-24 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #7c4d6e, #c9a84c, #7c4d6e, transparent)' }} />
-
-        <div className="relative z-10 max-w-3xl mx-auto space-y-8 animate-fade-up">
-          <div className="hr-ornament justify-center">
-            <span>สัพพรส · All Flavors</span>
+        <div className="relative z-10 max-w-6xl mx-auto w-full">
+          {/* Overline */}
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-6 h-px bg-rose-dust" />
+            <span className="font-body text-[10px] tracking-[0.3em] uppercase text-zinc-500">
+              Thai GL Quiz Site · สัพพรส
+            </span>
           </div>
 
-          <h1 className="font-display text-display-xl text-zinc-100">
-            <span className="italic">How well do you know</span>
+          {/* Headline — intentionally oversized */}
+          <h1
+            className="font-display italic text-white leading-[0.92] tracking-tight mb-10"
+            style={{ fontSize: "clamp(3.2rem, 10vw, 8.5rem)" }}
+          >
+            How well
             <br />
-            <span className="text-gradient-rose italic">your Thai GL?</span>
+            do you know
+            <br />
+            <span className="text-gradient-rose">your Thai GL?</span>
           </h1>
 
-          <p className="font-body text-zinc-400 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-            Quizzes for the fans — couples, plot, history, and everything in between.
-            From GAP to The Loyal Pin and beyond.
-          </p>
+          {/* Stats bar */}
+          <div className="flex items-center gap-5 mb-10 flex-wrap">
+            <span className="stat-item">{quizzes.length} Quizzes</span>
+            <span className="text-zinc-700">—</span>
+            <span className="stat-item">
+              {quizzes.reduce((sum, q) => sum + q.questionCount, 0)} Questions
+            </span>
+            <span className="text-zinc-700">—</span>
+            <span className="stat-item">2022 – 2026</span>
+          </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
-            <Link to="/quizzes" className="btn-primary text-base px-8 py-4">
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link to="/quizzes" className="btn-primary text-sm px-7 py-3">
               Browse All Quizzes
             </Link>
-            <Link to="/quiz/thai-gl-couples-101" className="btn-ghost text-base px-8 py-4">
+            <Link
+              to="/quiz/thai-gl-couples-101"
+              className="btn-ghost text-sm px-7 py-3"
+            >
               Quick Start →
             </Link>
           </div>
         </div>
 
-        {/* Thai geometric border bottom */}
-        <div className="absolute bottom-8 left-0 right-0 h-px" style={{ background: 'linear-gradient(90deg, transparent, #7c4d6e, #c9a84c, #7c4d6e, transparent)' }} />
+        {/* Thin bottom rule */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-border-subtle" />
       </section>
 
-      {/* Featured Quizzes */}
-      <section className="py-20 px-4 max-w-6xl mx-auto">
-        <div className="mb-10">
-          <p className="section-subtitle mb-2">Start here</p>
-          <h2 className="section-title">Featured Quizzes</h2>
+      {/* ── Featured Quizzes ─────────────────────────────── */}
+      <section className="py-20 px-5 sm:px-8 max-w-6xl mx-auto">
+        <div className="section-header">
+          <div className="section-accent-bar" />
+          <div>
+            <span className="section-overline">Start here</span>
+            <h2 className="section-title">Featured Quizzes</h2>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {featuredQuizzes.map((quiz) => (
-            <QuizCard key={quiz.id} quiz={quiz} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {featuredQuizzes.map((quiz, i) => (
+            <QuizCard key={quiz.id} quiz={quiz} index={i} />
           ))}
         </div>
 
-        <div className="mt-10 text-center">
-          <Link to="/quizzes" className="btn-ghost">
-            View All Quizzes
+        <div className="mt-8 flex justify-end">
+          <Link to="/quizzes" className="btn-ghost text-sm">
+            All Quizzes →
           </Link>
         </div>
       </section>
 
-      {/* Series Showcase */}
-      <section className="py-20 px-4 border-t border-border-subtle">
+      {/* ── Series Timeline ───────────────────────────────── */}
+      <section className="py-20 px-5 sm:px-8 border-t border-border-subtle">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-10">
-            <p className="section-subtitle mb-2">The shows</p>
-            <h2 className="section-title">Thai GL Universe</h2>
-            <p className="font-body text-zinc-500 text-sm mt-2 max-w-md">
-              From the groundbreaking first series to the 2026 releases — the genre keeps growing.
-            </p>
+          <div className="section-header">
+            <div
+              className="section-accent-bar"
+              style={{
+                background: "linear-gradient(to bottom, #c9a84c, #7c4d6e)",
+              }}
+            />
+            <div>
+              <span className="section-overline">The universe</span>
+              <h2 className="section-title">Thai GL Shows</h2>
+            </div>
           </div>
 
-          <div className="flex flex-wrap gap-3">
-            {FEATURED_SERIES.map(({ name, note }) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border-subtle rounded-xl overflow-hidden border border-border-subtle">
+            {SERIES_LIST.map(({ name, year, note }, i) => (
               <div
                 key={name}
-                className="card-base px-4 py-3 flex flex-col gap-1 hover:border-mauve-deep/50 transition-colors cursor-default"
+                className="flex items-center gap-4 bg-bg-base px-5 py-4 hover:bg-bg-surface transition-colors duration-150 group"
               >
-                <SeriesTag tag={name} size="md" />
-                <p className="font-body text-xs text-zinc-600 mt-1">{note}</p>
+                <span className="font-body text-xs text-zinc-700 tabular-nums shrink-0 w-8">
+                  {year}
+                </span>
+                <div className="w-px h-8 bg-border-subtle shrink-0" />
+                <div className="min-w-0">
+                  <p className="font-display italic text-zinc-200 text-base leading-tight truncate group-hover:text-rose-pale transition-colors duration-150">
+                    {name}
+                  </p>
+                  <p className="font-body text-[11px] text-zinc-600 mt-0.5">
+                    {note}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="py-24 px-4">
-        <div className="max-w-2xl mx-auto text-center bg-gradient-mauve rounded-2xl border border-mauve-deep/30 px-8 py-12 shadow-glow-mauve">
-          <div className="hr-ornament justify-center">
-            <span>Challenge yourself</span>
+      {/* ── CTA ──────────────────────────────────────────── */}
+      <section className="py-24 px-5 sm:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative overflow-hidden rounded-2xl border border-border-strong bg-bg-surface px-8 sm:px-16 py-16">
+            {/* Corner accent */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-mauve-deep/20 to-transparent rounded-bl-full pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-rose-dust/8 to-transparent rounded-tr-full pointer-events-none" />
+
+            <div className="relative z-10 max-w-xl">
+              <span className="section-overline">Challenge yourself</span>
+              <h2 className="font-display text-4xl sm:text-5xl italic text-white mb-4 leading-tight">
+                Ready to prove your GL knowledge?
+              </h2>
+              <p className="font-body text-zinc-500 text-sm mb-8 leading-relaxed">
+                From easy couple-matching to hard lore deep-dives — pick a quiz
+                and find out where you stand.
+              </p>
+              <Link to="/quizzes" className="btn-primary">
+                Take a Quiz Now
+              </Link>
+            </div>
           </div>
-          <h2 className="font-display text-display-md text-zinc-100 italic mt-2 mb-4">
-            Ready to prove your GL knowledge?
-          </h2>
-          <p className="font-body text-zinc-400 text-sm mb-8 max-w-sm mx-auto">
-            Pick a quiz and find out whether you're a casual viewer or the ultimate Thai GL scholar.
-          </p>
-          <Link to="/quizzes" className="btn-primary text-sm px-8 py-3">
-            Take a Quiz Now
-          </Link>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border-subtle py-10 px-4 text-center">
-        <p className="font-display italic text-zinc-600 text-sm">
-          Enemize Ben Yafit — made with 💕 for the Thai GL community
-        </p>
-        <p className="font-body text-xs text-zinc-700 mt-2">
-          Fan site · Not affiliated with any studio or network
-        </p>
+      {/* ── Footer ───────────────────────────────────────── */}
+      <footer className="border-t border-border-subtle py-8 px-5 sm:px-8">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span className="font-display italic text-zinc-600 text-sm">
+            Emenize Ben Yafit
+          </span>
+          <span className="font-body text-xs text-zinc-700">
+            Fan site · Not affiliated with any studio or network
+          </span>
+        </div>
       </footer>
     </div>
-  )
+  );
 }

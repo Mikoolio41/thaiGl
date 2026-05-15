@@ -5,7 +5,7 @@ const supabaseKey = import.meta.env.VITE_SUPABASE_KEY
 
 if (!supabaseUrl || !supabaseKey) {
   console.warn(
-    '[Enemize Ben Yafit] Supabase env vars not set. ' +
+    '[Emenize Ben Yafit] Supabase env vars not set. ' +
     'Copy .env.example → .env.local and fill in VITE_SUPABASE_URL and VITE_SUPABASE_KEY.'
   )
 }

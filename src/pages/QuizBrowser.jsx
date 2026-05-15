@@ -81,9 +81,9 @@ export default function QuizBrowser() {
           <p className="font-body text-xs text-zinc-600 mb-5 tracking-wide">
             {filtered.length} quiz{filtered.length !== 1 ? 'zes' : ''} found
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.map((quiz) => (
-              <QuizCard key={quiz.id} quiz={quiz} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {filtered.map((quiz, i) => (
+              <QuizCard key={quiz.id} quiz={quiz} index={i} />
             ))}
           </div>
         </>

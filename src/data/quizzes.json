@@ -265,5 +265,114 @@
         "difficulty": "easy"
       }
     ]
+  },
+  {
+    "id": "secret-of-us",
+    "title": "The Secret of Us",
+    "description": "LingOrm's Netflix Thai GL — how well do you know Lingling and Orm's story?",
+    "category": "couples",
+    "difficulty": "medium",
+    "coverImage": "https://picsum.photos/800/400?random=4",
+    "seriesTag": "The Secret of Us",
+    "questionCount": 8,
+    "estimatedMinutes": 5,
+    "questions": [
+      {
+        "id": "tsou-q1",
+        "quizId": "secret-of-us",
+        "type": "multiple-choice",
+        "question": "Which pairing stars in The Secret of Us?",
+        "options": ["LingOrm (Ling & Orm)", "FreenBecky (Freen & Becky)", "EngLot (Engfa & Charlotte)", "MilkLove (Milk & Love)"],
+        "correctAnswer": "LingOrm (Ling & Orm)",
+        "explanation": "LingOrm — Lingling Sirilak Kwong and Orm Kornnaphat Sethratanapong — star as the two leads. The Secret of Us was their breakout GL together and launched them into the international Thai GL spotlight.",
+        "mediaUrl": null,
+        "seriesTag": "The Secret of Us",
+        "difficulty": "easy"
+      },
+      {
+        "id": "tsou-q2",
+        "quizId": "secret-of-us",
+        "type": "multiple-choice",
+        "question": "On which streaming platform did The Secret of Us premiere?",
+        "options": ["Netflix", "YouTube / GMM", "WeTV", "iQIYI"],
+        "correctAnswer": "Netflix",
+        "explanation": "The Secret of Us is a Netflix Original Thai series — one of the first Thai GL productions to debut directly on a major global streaming platform, giving it instant worldwide reach.",
+        "mediaUrl": null,
+        "seriesTag": "The Secret of Us",
+        "difficulty": "easy"
+      },
+      {
+        "id": "tsou-q3",
+        "quizId": "secret-of-us",
+        "type": "multiple-choice",
+        "question": "What year did The Secret of Us premiere?",
+        "options": ["2024", "2023", "2025", "2022"],
+        "correctAnswer": "2024",
+        "explanation": "The Secret of Us premiered on Netflix in 2024 — the same year that The Loyal Pin trended in 38 countries, making 2024 arguably Thai GL's biggest international year.",
+        "mediaUrl": null,
+        "seriesTag": "The Secret of Us",
+        "difficulty": "easy"
+      },
+      {
+        "id": "tsou-q4",
+        "quizId": "secret-of-us",
+        "type": "multiple-choice",
+        "question": "What is Ling's full real name?",
+        "options": ["Lingling Sirilak Kwong", "Lingling Nattapat Kwong", "Nattapat Sirilak Kwong", "Lingling Sirilak Nimjirawat"],
+        "correctAnswer": "Lingling Sirilak Kwong",
+        "explanation": "Ling's full name is Lingling Sirilak Kwong. She is half Thai, half Hong Kong Chinese — her first name Lingling reflects her Chinese heritage, while Sirilak is her Thai name and Kwong her Chinese surname.",
+        "mediaUrl": null,
+        "seriesTag": "The Secret of Us",
+        "difficulty": "medium"
+      },
+      {
+        "id": "tsou-q5",
+        "quizId": "secret-of-us",
+        "type": "multiple-choice",
+        "question": "What is Orm's full real name?",
+        "options": ["Kornnaphat Sethratanapong", "Kornnaphat Puchongkul", "Kornnaphat Duangprasert", "Kornnaphat Charoenwong"],
+        "correctAnswer": "Kornnaphat Sethratanapong",
+        "explanation": "Orm's full name is Kornnaphat Sethratanapong. Together with Lingling Sirilak Kwong, she forms the LingOrm pairing — one of Thai GL's most beloved duos of 2024.",
+        "mediaUrl": null,
+        "seriesTag": "The Secret of Us",
+        "difficulty": "medium"
+      },
+      {
+        "id": "tsou-q6",
+        "quizId": "secret-of-us",
+        "type": "multiple-choice",
+        "question": "Which GMMTV Thai GL series had Netflix distribution before The Secret of Us?",
+        "options": ["23.5", "The Loyal Pin", "Affair", "Show Me Love"],
+        "correctAnswer": "23.5",
+        "explanation": "23.5 (GMMTV, 2024) starring MilkLove (Milk Pansa & Love Pattranite) had Netflix distribution in Southeast Asia and Latin America, helping build the platform's appetite for Thai GL content.",
+        "mediaUrl": null,
+        "seriesTag": "The Secret of Us",
+        "difficulty": "medium"
+      },
+      {
+        "id": "tsou-q7",
+        "quizId": "secret-of-us",
+        "type": "multiple-choice",
+        "question": "Which major 2024 Thai GL show did NOT air on Netflix?",
+        "options": ["The Loyal Pin", "The Secret of Us", "23.5", "Whale Store xoxo"],
+        "correctAnswer": "The Loyal Pin",
+        "explanation": "The Loyal Pin (FreenBecky) aired on Workpoint TV and YouTube — not Netflix. Yet it still became one of the most-viewed Thai GL series ever, trending in 38 countries without a Netflix deal.",
+        "mediaUrl": null,
+        "seriesTag": "The Secret of Us",
+        "difficulty": "medium"
+      },
+      {
+        "id": "tsou-q8",
+        "quizId": "secret-of-us",
+        "type": "multiple-choice",
+        "question": "What does Ling's nickname 'Ling' (ลิง) mean in Thai?",
+        "options": ["Monkey", "Firefly", "Lotus", "Princess"],
+        "correctAnswer": "Monkey",
+        "explanation": "'Ling' (ลิง) means monkey in Thai — a playful contrast to her graceful on-screen presence. Her co-star's name 'Orm' (อ้อม) means 'to embrace', giving the LingOrm ship name an unintentionally sweet double meaning.",
+        "mediaUrl": null,
+        "seriesTag": "The Secret of Us",
+        "difficulty": "hard"
+      }
+    ]
   }
 ]
