@@ -108,9 +108,36 @@
   animation: hero-up 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* ── Marquee ─────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 48s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation-play-state: paused; }
+  .hover-rise    { transform: none !important; }
+  .hero-anim     { animation: none; opacity: 1; }
+  .reveal        { transition: none; }
+}
+
+/* ── Pulsing dot (upcoming card) ─────────────────────── */
+@keyframes prod-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+.prod-dot {
+  animation: prod-pulse 2.2s ease-in-out infinite;
+}
+
 @layer utilities {
   .text-gradient-rose {
-    background: linear-gradient(135deg, #f0d0d0, #c98b8b);
+    background: linear-gradient(135deg, #f0c8d8, #c4708a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
