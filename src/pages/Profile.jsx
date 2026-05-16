@@ -141,7 +141,7 @@ export default function Profile() {
                   >
                     <div className="relative shrink-0">
                       <MiniRing score={attempt.score} total={attempt.total_questions} />
-                      <span className="absolute inset-0 flex items-center justify-center font-display text-sm italic text-zinc-200 rotate-90">
+                      <span className="absolute inset-0 flex items-center justify-center font-display text-sm italic text-zinc-200">
                         {pct}%
                       </span>
                     </div>

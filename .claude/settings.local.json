@@ -5,7 +5,9 @@
       "PowerShell(Stop-Process *)",
       "Bash(npm install *)",
       "Bash(npm run *)",
-      "WebFetch(domain:mydramalist.com)"
+      "WebFetch(domain:mydramalist.com)",
+      "Bash(git checkout *)",
+      "Bash(git push *)"
     ]
   }
 }

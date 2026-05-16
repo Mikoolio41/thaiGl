@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import useQuizStore from '../store/useQuizStore'
 import useAuthStore from '../store/useAuthStore'
 import ResultCard from '../components/ResultCard'
@@ -55,6 +55,13 @@ export default function Results() {
           quizId={currentQuiz.id}
           answers={answers}
         />
+
+        {/* Leaderboard link */}
+        <div className="mt-4 text-center">
+          <Link to="/leaderboard" className="font-body text-xs text-zinc-600 hover:text-zinc-400 transition-colors">
+            View leaderboard →
+          </Link>
+        </div>
 
         {/* Sign-in prompt for guests */}
         {!user && (

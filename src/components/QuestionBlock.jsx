@@ -1,6 +1,15 @@
 import { useState } from 'react'
+import Fuse from 'fuse.js'
 import MediaPlayer from './MediaPlayer'
 import SeriesTag from './SeriesTag'
+
+function isCloseEnough(typed, correct) {
+  const normalise = (s) => s.toLowerCase().trim().replace(/^the\s+/i, '')
+  if (normalise(typed) === normalise(correct)) return true
+  const fuse = new Fuse([correct], { includeScore: true, threshold: 0.4 })
+  const results = fuse.search(typed)
+  return results.length > 0 && results[0].score < 0.4
+}
 
 const OPTION_LABELS = ['A', 'B', 'C', 'D']
 
@@ -17,11 +26,20 @@ const OPTION_LABELS = ['A', 'B', 'C', 'D']
  */
 export default function QuestionBlock({ question, onAnswer, isAnswered, selectedAnswer }) {
   const [localSelected, setLocalSelected] = useState(null)
+  const [typedAnswer, setTypedAnswer] = useState('')
+  const [submitState, setSubmitState] = useState(null) // 'correct' | 'wrong' | null
 
   const handleSelect = (option) => {
     if (isAnswered || localSelected) return
     setLocalSelected(option)
     onAnswer(option)
+  }
+
+  const handleTypeSubmit = () => {
+    if (isAnswered || submitState || !typedAnswer.trim()) return
+    const correct = isCloseEnough(typedAnswer.trim(), question.correctAnswer)
+    setSubmitState(correct ? 'correct' : 'wrong')
+    onAnswer(correct ? question.correctAnswer : typedAnswer.trim())
   }
 
   const getOptionState = (option) => {
@@ -77,8 +95,66 @@ export default function QuestionBlock({ question, onAnswer, isAnswered, selected
         </h2>
       </div>
 
-      {/* Options */}
-      <div className="grid gap-3">
+      {/* Image-identify: full-width image + text input */}
+      {question.type === 'image-identify' && (
+        <div className="space-y-4">
+          {question.mediaUrl && (
+            <div className="rounded-xl overflow-hidden border border-border-subtle">
+              <img
+                src={question.mediaUrl}
+                alt="Identify this series"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+              />
+            </div>
+          )}
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={typedAnswer}
+              onChange={(e) => setTypedAnswer(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleTypeSubmit()}
+              disabled={!!submitState}
+              placeholder="Type the series name…"
+              className={`flex-1 bg-bg-elevated border rounded-xl px-4 py-3 font-body text-sm text-zinc-100 placeholder-zinc-600 outline-none transition-all duration-200 ${
+                submitState === 'correct'
+                  ? 'border-emerald-500/60 bg-emerald-900/20'
+                  : submitState === 'wrong'
+                  ? 'border-rose-dust/60 bg-rose-dust/10'
+                  : 'border-border-strong focus:border-mauve-deep/60'
+              }`}
+            />
+            {!submitState && (
+              <button
+                onClick={handleTypeSubmit}
+                disabled={!typedAnswer.trim()}
+                className="btn-primary px-5 py-3 disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                Submit
+              </button>
+            )}
+            {submitState === 'correct' && (
+              <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-emerald-900/20 border border-emerald-500/60 text-emerald-400 font-body text-sm">
+                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
+                Correct!
+              </div>
+            )}
+            {submitState === 'wrong' && (
+              <div className="flex items-center gap-2 px-4 py-3 rounded-xl bg-rose-dust/10 border border-rose-dust/60 text-rose-pale font-body text-sm whitespace-nowrap">
+                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                {question.correctAnswer}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Options (multiple-choice / image / quote / audio) */}
+      {question.type !== 'image-identify' && <div className="grid gap-3">
         {question.options.map((option, i) => {
           const state = getOptionState(option)
           return (
@@ -117,7 +193,7 @@ export default function QuestionBlock({ question, onAnswer, isAnswered, selected
             </button>
           )
         })}
-      </div>
+      </div>}
 
       {/* Explanation revealed after answering */}
       {isAnswered && question.explanation && (

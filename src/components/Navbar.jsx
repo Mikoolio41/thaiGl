@@ -3,7 +3,10 @@ import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import useAuthStore from '../store/useAuthStore'
 
 const NAV_LINKS = [
+  { to: '/', label: 'Home' },
   { to: '/quizzes', label: 'Quizzes' },
+  { to: '/compete', label: 'Compete' },
+  { to: '/leaderboard', label: 'Leaderboard' },
   { to: '/about', label: 'About' },
 ]
 
@@ -26,26 +29,56 @@ export default function Navbar() {
   const displayName = profile?.username ?? user?.email?.split('@')[0] ?? 'You'
   const avatarUrl = profile?.avatar_url
 
+  const isHome = location.pathname === '/'
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-bg-base/90 backdrop-blur-lg border-b border-border-subtle'
-          : 'bg-transparent'
+          ? 'backdrop-blur-lg border-b'
+          : ''
+      } ${
+        isHome
+          ? scrolled ? 'bg-[#08070c]/80 border-[#241d36]' : 'bg-transparent'
+          : scrolled ? 'bg-bg-base/90 border-border-subtle' : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="group flex items-baseline gap-2.5">
-          <span className="font-display text-lg italic text-white group-hover:text-rose-pale transition-colors duration-200">
-            Emenize Ben Yafit
-          </span>
-          <span className="font-body text-[9px] tracking-[0.22em] uppercase text-zinc-600 hidden sm:block">
-            สัพพรส
-          </span>
+      <nav className="w-full px-5 sm:px-14 h-14 flex items-center justify-between sm:grid sm:grid-cols-[1fr_auto_1fr]">
+        {/* Logo — left */}
+        <Link to="/" className="group flex items-center gap-3">
+          {isHome ? (
+            <>
+              <span style={{
+                width: 32, height: 32, borderRadius: '50%',
+                background: 'conic-gradient(from 0deg, #d27a92, #e5c068, #a872c4, #d27a92)',
+                padding: 2, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+              }}>
+                <span style={{
+                  width: '100%', height: '100%', borderRadius: '50%',
+                  background: '#08070c',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic',
+                  fontSize: 16, color: '#e5c068',
+                }}>e</span>
+              </span>
+              <span className="flex flex-col">
+                <span className="font-display text-[18px] italic text-white leading-none">Emenize Ben Yafit</span>
+                <span className="hidden sm:block font-mono text-[9px] tracking-[0.28em] uppercase mt-1" style={{ color: '#c896e0' }}>สัพพรส · all flavors</span>
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="font-display text-lg italic text-white group-hover:text-rose-pale transition-colors duration-200">
+                Emenize Ben Yafit
+              </span>
+              <span className="font-body text-[9px] tracking-[0.22em] uppercase text-zinc-600 hidden sm:block">
+                สัพพรส
+              </span>
+            </>
+          )}
         </Link>
 
-        {/* Desktop nav */}
+        {/* Nav links — center */}
         <div className="hidden sm:flex items-center gap-6">
           {NAV_LINKS.map(({ to, label }) => (
             <NavLink
@@ -54,17 +87,20 @@ export default function Navbar() {
               className={({ isActive }) =>
                 `font-body text-sm transition-colors duration-200 pb-0.5 border-b ${
                   isActive
-                    ? 'text-white border-rose-dust'
-                    : 'text-zinc-500 border-transparent hover:text-zinc-200 hover:border-zinc-600'
+                    ? isHome ? 'text-white border-[#c896e0]' : 'text-white border-rose-dust'
+                    : isHome ? 'text-[#bcb4c8] border-transparent hover:text-white hover:border-[#c896e0]' : 'text-zinc-500 border-transparent hover:text-zinc-200 hover:border-zinc-600'
                 }`
               }
             >
               {label}
             </NavLink>
           ))}
+        </div>
 
+        {/* Profile — right */}
+        <div className="hidden sm:flex items-center justify-end">
           {user ? (
-            <div className="relative ml-2">
+            <div className="relative">
               <button
                 onClick={() => setUserMenuOpen((v) => !v)}
                 className="flex items-center gap-2 pl-3 pr-2 py-1.5 rounded-lg border border-border-strong hover:border-border-subtle bg-bg-elevated hover:bg-bg-overlay transition-all duration-200"
@@ -103,7 +139,7 @@ export default function Navbar() {
           ) : (
             <button
               onClick={openModal}
-              className="ml-2 font-body text-xs font-medium px-4 py-2 rounded-md bg-rose-dust/10 text-rose-pale border border-rose-dust/20 hover:bg-rose-dust/20 hover:border-rose-dust/40 transition-all duration-200"
+              className="font-body text-xs font-medium px-4 py-2 rounded-md bg-rose-dust/10 text-rose-pale border border-rose-dust/20 hover:bg-rose-dust/20 hover:border-rose-dust/40 transition-all duration-200"
             >
               Sign In
             </button>
