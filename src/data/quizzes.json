@@ -9,6 +9,7 @@
     "seriesTag": "general",
     "questionCount": 7,
     "estimatedMinutes": 5,
+    "comingSoon": true,
     "questions": [
       {
         "id": "tgl101-q1",
@@ -106,6 +107,7 @@
     "seriesTag": "The Loyal Pin",
     "questionCount": 6,
     "estimatedMinutes": 4,
+    "comingSoon": true,
     "questions": [
       {
         "id": "lp-q1",
@@ -191,6 +193,7 @@
     "seriesTag": "GAP The Series",
     "questionCount": 6,
     "estimatedMinutes": 5,
+    "comingSoon": true,
     "questions": [
       {
         "id": "gap-q1",
@@ -267,6 +270,212 @@
     ]
   },
   {
+    "id": "name-that-series",
+    "title": "Name That Series",
+    "description": "One scene. No options. Can you identify the Thai GL series?",
+    "category": "general knowledge",
+    "difficulty": "hard",
+    "coverImage": null,
+    "seriesTag": "general",
+    "questionCount": 16,
+    "estimatedMinutes": 10,
+    "comingSoon": true,
+    "questions": [
+      {
+        "id": "nts-q1",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Denied Love",
+        "explanation": "This scene is from Denied Love (2025).",
+        "mediaUrl": "/scene_01.png",
+        "seriesTag": "Denied Love",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q2",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Queendom",
+        "explanation": "This scene is from Queendom (2025).",
+        "mediaUrl": "/scene_02.png",
+        "seriesTag": "Queendom",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q3",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Roller Coaster",
+        "explanation": "This scene is from Roller Coaster (2025).",
+        "mediaUrl": "/scene_03.png",
+        "seriesTag": "Roller Coaster",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q4",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "The Secret of Us",
+        "explanation": "This scene is from The Secret of Us (2024), the LingOrm Netflix series.",
+        "mediaUrl": "/scene_04.png",
+        "seriesTag": "The Secret of Us",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q5",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Us",
+        "explanation": "This scene is from Us (2024).",
+        "mediaUrl": "/scene_05.png",
+        "seriesTag": "Us",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q6",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Pluto",
+        "explanation": "This scene is from Pluto (2025).",
+        "mediaUrl": "/scene_07.png",
+        "seriesTag": "Pluto",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q7",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Us",
+        "explanation": "This scene is from Us (2024).",
+        "mediaUrl": "/scene_06.png",
+        "seriesTag": "Us",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q8",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Affair",
+        "explanation": "This scene is from Affair (2024), starring LMSY.",
+        "mediaUrl": "/scene_08.png",
+        "seriesTag": "Affair",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q9",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "4 Elements: The Water",
+        "explanation": "This scene is from 4 Elements: The Water (2025), starring EngLot.",
+        "mediaUrl": "/scene_09.png",
+        "seriesTag": "4 Elements: The Water",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q10",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "ClaireBell",
+        "explanation": "This scene is from ClaireBell (2025).",
+        "mediaUrl": "/scene_10.png",
+        "seriesTag": "ClaireBell",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q11",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Love Design",
+        "explanation": "This scene is from Love Design (2025).",
+        "mediaUrl": "/scene_11.png",
+        "seriesTag": "Love Design",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q12",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Player",
+        "explanation": "This scene is from Player (2025).",
+        "mediaUrl": "/scene_12.png",
+        "seriesTag": "Player",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q13",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Love Senior",
+        "explanation": "This scene is from Love Senior (2025).",
+        "mediaUrl": "/scene_13.png",
+        "seriesTag": "Love Senior",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q14",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Reverse with Me",
+        "explanation": "This scene is from Reverse with Me (2025).",
+        "mediaUrl": "/scene_14.png",
+        "seriesTag": "Reverse with Me",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q15",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "4 Elements: The Earth",
+        "explanation": "This scene is from 4 Elements: The Earth (2026).",
+        "mediaUrl": "/scene_15.png",
+        "seriesTag": "4 Elements: The Earth",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q16",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Hometown Romance",
+        "explanation": "This scene is from Hometown Romance (2026), starring LMSY.",
+        "mediaUrl": "/scene_16.png",
+        "seriesTag": "Hometown Romance",
+        "difficulty": "hard"
+      }
+    ]
+  },
+  {
     "id": "secret-of-us",
     "title": "The Secret of Us",
     "description": "LingOrm's Netflix Thai GL — how well do you know Lingling and Orm's story?",
@@ -276,6 +485,7 @@
     "seriesTag": "The Secret of Us",
     "questionCount": 8,
     "estimatedMinutes": 5,
+    "comingSoon": true,
     "questions": [
       {
         "id": "tsou-q1",

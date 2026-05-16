@@ -8,6 +8,11 @@ import QuizPlayer from './pages/QuizPlayer'
 import Results from './pages/Results'
 import About from './pages/About'
 import Profile from './pages/Profile'
+import Leaderboard from './pages/Leaderboard'
+import Compete from './pages/Compete'
+import WaitingRoom from './pages/WaitingRoom'
+import CompetitionPlay from './pages/CompetitionPlay'
+import CompetitionResults from './pages/CompetitionResults'
 import useAuthStore from './store/useAuthStore'
 
 function ScrollToTop() {
@@ -38,6 +43,11 @@ export default function App() {
             <Route path="/results" element={<Results />} />
             <Route path="/about" element={<About />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route path="/compete" element={<Compete />} />
+            <Route path="/room/:joinCode" element={<WaitingRoom />} />
+            <Route path="/room/:joinCode/play" element={<CompetitionPlay />} />
+            <Route path="/room/:joinCode/results" element={<CompetitionResults />} />
           </Routes>
         </main>
       </div>

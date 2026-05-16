@@ -20,6 +20,10 @@ export default function QuizBrowser() {
       if (search && !q.title.toLowerCase().includes(search.toLowerCase()) &&
           !q.description.toLowerCase().includes(search.toLowerCase())) return false
       return true
+    }).sort((a, b) => {
+      if (a.id === 'name-that-series') return -1
+      if (b.id === 'name-that-series') return 1
+      return 0
     })
   }, [category, series, difficulty, search])
 
@@ -111,7 +115,7 @@ function FilterSelect({ label, value, onChange, options }) {
       >
         {options.map((opt) => (
           <option key={opt} value={opt} className="capitalize bg-bg-surface">
-            {opt === 'all' ? `All ${label === 'Difficulty' ? 'Difficulties' : label === 'Series' ? 'Series' : label + 's'}` : opt}
+            {opt === 'all' ? `All ${label === 'Difficulty' ? 'Difficulties' : label === 'Series' ? 'Series' : label === 'Category' ? 'Categories' : label + 's'}` : opt}
           </option>
         ))}
       </select>

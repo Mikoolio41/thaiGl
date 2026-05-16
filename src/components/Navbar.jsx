@@ -3,7 +3,10 @@ import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import useAuthStore from '../store/useAuthStore'
 
 const NAV_LINKS = [
+  { to: '/', label: 'Home' },
   { to: '/quizzes', label: 'Quizzes' },
+  { to: '/compete', label: 'Compete' },
+  { to: '/leaderboard', label: 'Leaderboard' },
   { to: '/about', label: 'About' },
 ]
 
