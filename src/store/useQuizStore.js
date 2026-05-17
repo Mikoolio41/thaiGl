@@ -29,7 +29,8 @@ const useQuizStore = create((set, get) => ({
       ...quiz,
       questions: quiz.questions.map((q) => ({ ...q, options: shuffle(q.options) })),
     }
-    const timePerQuestion = quiz.timePerQuestion ?? 30
+    // null means untimed; undefined/missing defaults to 30
+    const timePerQuestion = quiz.timePerQuestion === undefined ? 30 : quiz.timePerQuestion
     set({
       currentQuiz: shuffledQuiz,
       currentQuestionIndex: 0,

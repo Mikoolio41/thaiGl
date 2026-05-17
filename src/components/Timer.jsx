@@ -9,6 +9,7 @@ export default function Timer({ isAnswered }) {
   const { timeLeft, timePerQuestion, setTimeLeft, timeExpired, nextQuestion } = useQuizStore()
 
   useEffect(() => {
+    if (timePerQuestion === null) return
     if (isAnswered) return
 
     if (timeLeft <= 0) {
@@ -19,7 +20,9 @@ export default function Timer({ isAnswered }) {
 
     const id = setTimeout(() => setTimeLeft(timeLeft - 1), 1000)
     return () => clearTimeout(id)
-  }, [timeLeft, isAnswered, setTimeLeft, timeExpired, nextQuestion])
+  }, [timeLeft, isAnswered, timePerQuestion, setTimeLeft, timeExpired, nextQuestion])
+
+  if (timePerQuestion === null) return null
 
   const pct = (timeLeft / timePerQuestion) * 100
   const isUrgent = timeLeft <= Math.min(10, Math.floor(timePerQuestion * 0.2))

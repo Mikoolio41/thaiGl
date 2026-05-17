@@ -315,7 +315,7 @@
     "seriesTag": "general",
     "questionCount": 19,
     "estimatedMinutes": 19,
-    "timePerQuestion": 60,
+    "timePerQuestion": null,
     "tone": "rose",
     "releaseDate": "opens on Tzet Shabbat",
     "comingSoon": false,
