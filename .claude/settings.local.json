@@ -10,7 +10,10 @@
       "Bash(git push *)",
       "Bash(dir \"C:\\\\Users\\\\mikab\\\\OneDrive\\\\Desktop\\\\thaiGl\\\\public\")",
       "Bash(findstr scene_)",
-      "Bash(findstr scene_1)"
+      "Bash(findstr scene_1)",
+      "Bash(git merge *)",
+      "Bash(git stash *)",
+      "Bash(git pull *)"
     ]
   }
 }
