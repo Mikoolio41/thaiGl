@@ -313,11 +313,12 @@
     "difficulty": "hard",
     "coverImage": "/hometown_romance.jpg",
     "seriesTag": "general",
-    "questionCount": 16,
-    "estimatedMinutes": 10,
+    "questionCount": 19,
+    "estimatedMinutes": 19,
+    "timePerQuestion": 60,
     "tone": "rose",
     "releaseDate": "opens on Tzet Shabbat",
-    "comingSoon": true,
+    "comingSoon": false,
     "questions": [
       {
         "id": "nts-q1",
@@ -411,7 +412,7 @@
         "options": [],
         "correctAnswer": "Affair",
         "explanation": "This scene is from Affair (2024), starring LMSY.",
-        "mediaUrl": "/scene_08.png",
+        "mediaUrl": "/scene_08.jpeg",
         "seriesTag": "Affair",
         "difficulty": "hard"
       },
@@ -423,7 +424,7 @@
         "options": [],
         "correctAnswer": "4 Elements: The Water",
         "explanation": "This scene is from 4 Elements: The Water (2025), starring EngLot.",
-        "mediaUrl": "/scene_09.png",
+        "mediaUrl": "/scene_09.jpeg",
         "seriesTag": "4 Elements: The Water",
         "difficulty": "hard"
       },
@@ -435,7 +436,7 @@
         "options": [],
         "correctAnswer": "ClaireBell",
         "explanation": "This scene is from ClaireBell (2025).",
-        "mediaUrl": "/scene_10.png",
+        "mediaUrl": "/scene_10.jpeg",
         "seriesTag": "ClaireBell",
         "difficulty": "hard"
       },
@@ -447,7 +448,7 @@
         "options": [],
         "correctAnswer": "Love Design",
         "explanation": "This scene is from Love Design (2025).",
-        "mediaUrl": "/scene_11.png",
+        "mediaUrl": "/scene_11.jpeg",
         "seriesTag": "Love Design",
         "difficulty": "hard"
       },
@@ -459,7 +460,7 @@
         "options": [],
         "correctAnswer": "Player",
         "explanation": "This scene is from Player (2025).",
-        "mediaUrl": "/scene_12.png",
+        "mediaUrl": "/scene_12.jpeg",
         "seriesTag": "Player",
         "difficulty": "hard"
       },
@@ -471,7 +472,7 @@
         "options": [],
         "correctAnswer": "Love Senior",
         "explanation": "This scene is from Love Senior (2025).",
-        "mediaUrl": "/scene_13.png",
+        "mediaUrl": "/scene_13.jpeg",
         "seriesTag": "Love Senior",
         "difficulty": "hard"
       },
@@ -483,7 +484,7 @@
         "options": [],
         "correctAnswer": "Reverse with Me",
         "explanation": "This scene is from Reverse with Me (2025).",
-        "mediaUrl": "/scene_14.png",
+        "mediaUrl": "/scene_14.jpeg",
         "seriesTag": "Reverse with Me",
         "difficulty": "hard"
       },
@@ -495,7 +496,7 @@
         "options": [],
         "correctAnswer": "4 Elements: The Earth",
         "explanation": "This scene is from 4 Elements: The Earth (2026).",
-        "mediaUrl": "/scene_15.png",
+        "mediaUrl": "/scene_15.jpeg",
         "seriesTag": "4 Elements: The Earth",
         "difficulty": "hard"
       },
@@ -507,9 +508,45 @@
         "options": [],
         "correctAnswer": "Hometown Romance",
         "explanation": "This scene is from Hometown Romance (2026), starring LMSY.",
-        "mediaUrl": "/scene_16.png",
+        "mediaUrl": "/scene_16.jpeg",
         "seriesTag": "Hometown Romance",
         "difficulty": "hard"
+      },
+      {
+        "id": "nts-q17",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Poisonous Love",
+        "explanation": "This scene is from Poisonous Love.",
+        "mediaUrl": "/scene_17.png",
+        "seriesTag": "Poisonous Love",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q18",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "Harmony Secret",
+        "explanation": "This scene is from Harmony Secret, starring LMSY.",
+        "mediaUrl": "/scene_18.png",
+        "seriesTag": "Harmony Secret",
+        "difficulty": "hard"
+      },
+      {
+        "id": "nts-q19",
+        "quizId": "name-that-series",
+        "type": "image-identify",
+        "question": "Which Thai GL series is this scene from?",
+        "options": [],
+        "correctAnswer": "GAP The Series",
+        "explanation": "This scene is from GAP The Series (2022), the first ever full-length Thai GL, starring FreenBecky.",
+        "mediaUrl": "/scene_19.png",
+        "seriesTag": "GAP The Series",
+        "difficulty": "medium"
       }
     ]
   },

@@ -19,6 +19,7 @@ const useQuizStore = create((set, get) => ({
   currentQuestionIndex: 0,
   answers: [],        // [{ questionId, selectedAnswer, isCorrect }]
   score: 0,
+  timePerQuestion: 30,
   timeLeft: 30,
   isFinished: false,
   isStarted: false,
@@ -28,12 +29,14 @@ const useQuizStore = create((set, get) => ({
       ...quiz,
       questions: quiz.questions.map((q) => ({ ...q, options: shuffle(q.options) })),
     }
+    const timePerQuestion = quiz.timePerQuestion ?? 30
     set({
       currentQuiz: shuffledQuiz,
       currentQuestionIndex: 0,
       answers: [],
       score: 0,
-      timeLeft: 30,
+      timePerQuestion,
+      timeLeft: timePerQuestion,
       isFinished: false,
       isStarted: true,
     })
@@ -64,7 +67,7 @@ const useQuizStore = create((set, get) => ({
     const nextIndex = currentQuestionIndex + 1
     const isFinished = nextIndex >= currentQuiz.questions.length
 
-    set({ currentQuestionIndex: nextIndex, timeLeft: 30, isFinished })
+    set({ currentQuestionIndex: nextIndex, timeLeft: get().timePerQuestion, isFinished })
   },
 
   /** Called by the Timer when time runs out — records a null answer and advances. */
@@ -88,6 +91,7 @@ const useQuizStore = create((set, get) => ({
       currentQuestionIndex: 0,
       answers: [],
       score: 0,
+      timePerQuestion: 30,
       timeLeft: 30,
       isFinished: false,
       isStarted: false,

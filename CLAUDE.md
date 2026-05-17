@@ -195,7 +195,7 @@ Each question:
 - `options` must be `[]`
 - Answer validation uses `fuse.js` fuzzy match (threshold 0.4) — accepts typos and missing "The"
 - If close enough → passes `correctAnswer` to store (marked correct); otherwise passes typed string (marked wrong)
-- **Image files live in `public/` and are named `scene_XX.png`** (non-descriptive to avoid filename spoilers)
+- **Image files live in `public/` and are named `scene_XX.png` or `scene_XX.jpeg`** (non-descriptive to avoid filename spoilers). Scenes 08–16 are `.jpeg`; all others are `.png`.
 - Keep a record of which scene number maps to which series (not stored in code)
 
 ### Current quizzes
@@ -292,6 +292,9 @@ Competition mode follows the same flow but `isFinished` triggers a write to `com
 | `scene_14.png` | Reverse with Me |
 | `scene_15.png` | 4 Elements: The Earth |
 | `scene_16.png` | Hometown Romance |
+| `scene_17.jpeg` | Poisonous Love |
+| `scene_18.jpeg` | Harmony Secret |
+| `scene_19.jpeg` | GAP The Series |
 
 ---
 

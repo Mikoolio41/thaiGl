@@ -6,14 +6,14 @@ import useQuizStore from '../store/useQuizStore'
  * On expiry: records a null answer then advances to the next question.
  */
 export default function Timer({ isAnswered }) {
-  const { timeLeft, setTimeLeft, timeExpired, nextQuestion } = useQuizStore()
+  const { timeLeft, timePerQuestion, setTimeLeft, timeExpired, nextQuestion } = useQuizStore()
 
   useEffect(() => {
     if (isAnswered) return
 
     if (timeLeft <= 0) {
-      timeExpired()   // record null answer for current question
-      nextQuestion()  // advance
+      timeExpired()
+      nextQuestion()
       return
     }
 
@@ -21,8 +21,8 @@ export default function Timer({ isAnswered }) {
     return () => clearTimeout(id)
   }, [timeLeft, isAnswered, setTimeLeft, timeExpired, nextQuestion])
 
-  const pct = (timeLeft / 30) * 100
-  const isUrgent = timeLeft <= 10
+  const pct = (timeLeft / timePerQuestion) * 100
+  const isUrgent = timeLeft <= Math.min(10, Math.floor(timePerQuestion * 0.2))
 
   return (
     <div className="flex items-center gap-2.5">

@@ -60,7 +60,7 @@ export default function QuestionBlock({ question, onAnswer, isAnswered, selected
     <div className="animate-fade-in space-y-6">
       {/* Series / difficulty meta */}
       <div className="flex items-center gap-2 flex-wrap">
-        <SeriesTag tag={question.seriesTag} />
+        {question.type !== 'image-identify' && <SeriesTag tag={question.seriesTag} />}
         <span className="font-body text-[10px] tracking-widest uppercase text-zinc-600">
           {question.difficulty}
         </span>
